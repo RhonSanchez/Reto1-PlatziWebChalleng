@@ -18,6 +18,55 @@
 
     <!-- No dude en eliminar estos estilos o personalizarlos en su propia hoja de estilo 👍 -->
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap");
+
+      @font-face {
+        font-family: "icomoon";
+        src: url("./fonts/icomoon.eot?ui4jaz");
+        src: url("./fonts/icomoon.eot?ui4jaz#iefix") format("embedded-opentype"),
+          url("./fonts/icomoon.ttf?ui4jaz") format("truetype"),
+          url("./fonts/icomoon.woff?ui4jaz") format("woff"),
+          url("./fonts/icomoon.svg?ui4jaz#icomoon") format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      [class^="icon-"],
+      [class*=" icon-"] {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: "icomoon" !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .icon-twitter:before {
+        content: "\e901";
+        list-style: none;
+      }
+      .icon-facebook:before {
+        content: "\e902";
+        list-style: none;
+      }
+      .icon-instagram:before {
+        content: "\e904";
+        list-style: none;
+      }
+
+      * {
+        margin: 0;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -25,11 +74,193 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+      .container {
+        height: 100vh;
+        background-image: url("images/bg-desktop.svg");
+        background-color: hsl(228, 45%, 44%);
+        padding: 40px 60px;
+      }
+
+      .logo {
+        width: 200px;
+        margin-bottom: 80px;
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .content img {
+        width: 600px;
+      }
+
+      .text {
+        width: 50%;
+      }
+      .title {
+        font-family: "Poppins", sans-serif;
+        font-size: 2.5em;
+        color: white;
+        margin: 20px 0;
+        letter-spacing: 2px;
+      }
+      .text p {
+        color: white;
+        font-size: 1.1em;
+        margin: 30px 0;
+        letter-spacing: 1px;
+      }
+      .btn {
+        width: 190px;
+        height: 55px;
+        color: hsl(228, 45%, 44%);
+        border-radius: 40px;
+        padding: 10px 30px;
+        background-color: white;
+        box-shadow: 3px 3px 10px 0px black;
+      }
+      .btn:hover {
+        cursor: pointer;
+      }
+      .social {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .social i {
+        color: white;
+        margin: 0 5px;
+        font-size: 40px;
+      }
+      @media screen and (max-width: 1024px) {
+        .logo {
+          width: 150px;
+          margin-bottom: 50px;
+        }
+
+        .content img {
+          width: 400px;
+        }
+        .title {
+          font-size: 2em;
+        }
+
+        .text p {
+          font-size: 0.8em;
+        }
+        .social i {
+          font-size: 30px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .logo {
+          width: 130px;
+          margin-bottom: 30px;
+        }
+        .content img {
+          width: 50%;
+          height: 300px;
+          padding-right: 20px;
+        }
+
+        .title {
+          font-size: 1.3em;
+        }
+
+        .text p {
+          font-size: 0.5em;
+        }
+        .btn {
+          width: 100px;
+          height: 30px;
+          padding: 0;
+          font-size: 0.6em;
+        }
+        .social i {
+          font-size: 25px;
+        }
+      }
+
+      @media screen and (max-width: 425px) {
+        .container {
+          height: initial;
+          padding: 40px 30px;
+        }
+
+        .logo {
+          width: 50%;
+          margin-bottom: 40px;
+        }
+
+        .content {
+          flex-wrap: wrap;
+        }
+
+        .content img {
+          width: 100%;
+          height: 200px;
+          margin-bottom: 20px;
+        }
+
+        .text {
+          width: 100%;
+        }
+
+        .title {
+          font-size: 1.2em;
+          text-align: center;
+        }
+
+        .text p {
+          font-size: 0.9em;
+          text-align: center;
+        }
+
+        .btn {
+          width: 80%;
+          height: 40px;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          align-self: center;
+          margin: auto;
+        }
+        .social {
+          justify-content: center;
+          margin: 60px 0 0;
+        }
+      }
     </style>
   </head>
   <body>
-    Build The Community Your Fans Will Love Huddle re-imagines the way we build
-    communities. You have a voice, but so does your audience. Create connections
-    with your users as you engage in genuine discussion. Register
+    <div class="container">
+      <img class="logo" src="./images/logo.svg" alt="" />
+      <div class="content">
+        <img src="./images/illustration-mockups.svg" alt="" />
+        <div class="text">
+          <h1 class="title">
+            Build The Community<br />
+            Your Fans Will Love
+          </h1>
+          <p>
+            Huddle re-imagines the way we build communities. You have <br />a
+            voice, but so does your audience. Create connections with <br />your
+            users as you engage in genuine discussion.
+          </p>
+          <button class="btn">Register</button>
+        </div>
+      </div>
+      <footer class="social">
+        <i class="icon-facebook"></i>
+        <i class="icon-twitter"></i>
+        <i class="icon-instagram"></i>
+      </footer>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/081494eabe.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
